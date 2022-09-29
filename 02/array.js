@@ -33,5 +33,10 @@ for(let t=0; t<arrayValueNew.length; t++){
 arrayValueNew[0] = true;
 arrayValueNew = [];
 console.log(arrayValueNew);
+let arraylevel =[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
 
 
