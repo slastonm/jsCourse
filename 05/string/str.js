@@ -17,7 +17,7 @@ console.log(userName.toLocaleLowerCase());
 let getCode = userName.charCodeAt(0);
 console.log(getCode);
 
-let transformStr = "Hello*I*    am                  * array";
+let transformStr = "   Hello*I*    am                  * array    ";
 let aStr = 'Hello';
 let arrValue = transformStr.split("*");
 console.log(aStr.split(""));
