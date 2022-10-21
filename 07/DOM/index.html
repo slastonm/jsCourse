@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let innerHtmlFn = ()=>{
+            alert('Hello js');
+        }
+    </script>
+    <script src="dom.js"></script>
+</head>
+<body>
+    <input type="button" onclick="innerHtmlFn()" value="Js call btn">
+    <br>
+    <a href="javascript:alert('Hello inline js')">Link js</a>
+    <button id="clickMe">
+        Click to call js
+    </button>
+    <p>
+        Text
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo culpa sint suscipit corporis fugiat, beatae quia ducimus, sequi asperiores quibusdam totam debitis placeat, eos assumenda dolores quasi? Earum, voluptatem reiciendis.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, dolor.
+    </p>
+    <div class="text-block">
+        <!-- hello -->
+        Hello
+    </div>
+    <div class="text-block">
+        Text
+    </div>
+    <div class="text-block">
+        Block
+    </div>
+    <footer>
+        <p id="id-js" class="class-js">
+            Id text
+        </p>
+        <div class="class-js">
+            Div text
+        </div>
+        <a href="#">Link for js</a>
+        <a href="#">Link 2 for js</a>
+        <ul>
+            <li>Footer 1</li>
+            <li>Footer 2</li>
+            <li>Footer 3</li>
+        </ul>
+    </footer>
+    <!-- without window.onload <script src="dom.js"></script> -->
+</body>
+</html>
