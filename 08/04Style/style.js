@@ -7,4 +7,13 @@ window.onload = ()=>{
     p.style.color ='red';
     p.style.fontWeight = 'bold';
 
+    // let images = [
+    //     {
+    //         imgPath:'img/image.png',
+    //         alt:'png image'
+    //         href:'https://img.com/60903073638.jpg'
+    //     }
+    //     ...
+    // ]
+
 }
