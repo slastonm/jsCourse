@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let strTest = 'css';
+        document.write(`${/^c/.test(strTest)} C on start <br>`);
+        document.write(`${/ss$/.test(strTest)} SS on end <br>`);
+        let time = "15:05";
+        document.write(`${/^\d{1,2}:\d\d$/.test(time)} is corect time <br>`);
+        // 21-12-1999;
+        // 2000-10-30;
+        let multStr = `1st line
+2nd line
+3rd line
+`;
+        let re = /^\d/gm;
+        let mathes = multStr.match(re);
+        console.log(mathes);
+
+        console.log('I know JS! js Javascript'.match(/\bJS\b/));
+        console.log('I know JS! js Javascript'.match(/\bJS\b/gi));
+
+        // +38(066)223-23-23
+        let phoneNumber = "+38(066)223-23-23";
+        let phonePattern = /\+38\(\d{3}\)\d{3}-\d{2}-\d{2}/;
+        document.write(`Phone test ${phonePattern.test(phoneNumber)} <br>`);
+
+        // Tom Soer Borisovich
+        let name = "Tom Soer Borisovich"
+        let namePattern = /[a-zA-Z]+[a-zA-Z]+[a-zA-Z]/;
+        document.write(`Text name ${namePattern.test(name)} <br>`);
+
+        let userEmail = 'tester@test.c';
+        let userEmail2 = 'tEsT_er@test.ukrnet12345';
+        let userEmail3 = 'test19er@test.uk';
+
+
+        let emailPattern = /\b[a-z0-9._]+@[a-z]{2,6}\.[a-z]{2,4}\b/i;
+        document.write(`Is email valid ${emailPattern.test(userEmail)} <br>`);
+        document.write(`Is email valid ${emailPattern.test(userEmail2)} <br>`);
+        document.write(`Is email valid ${emailPattern.test(userEmail3)} <br>`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

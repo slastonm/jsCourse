@@ -1,0 +1,22 @@
+:root{
+     --body-bg:#333;
+     --mouse-x:0px;
+     --mouse-y:0px;
+
+}
+body{
+    background-color: var(--body-bg);
+
+}
+div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    left: var(--mouse-x);
+    top: var(--mouse-y);
+}
+button{
+    position: absolute;
+    right: 0;
+}

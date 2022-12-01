@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let dataContainer = document.querySelector('.sesion-storage');
+            let read = document.querySelector('.read');
+            let write = document.querySelector('.write');
+            let count = 0;
+            read.onclick = function(){
+                dataContainer.innerHTML = `
+                ${window.sessionStorage.length} length <br>
+                ${window.sessionStorage.key2} :key2 value <br>
+                ${window.sessionStorage["key3"]} <br>
+                `;
+
+            }
+            write.onclick = function(){
+                window.sessionStorage.setItem("key1", "Key value");
+                window.sessionStorage.key2 = count++;
+                window.sessionStorage["key3"] = "Test value 3";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="sesion-storage">
+
+    </p>
+    <button class="read">
+        Get data from storage
+    </button>
+    <button class="write">
+        Write data to storage
+    </button>
+</body>
+</html>

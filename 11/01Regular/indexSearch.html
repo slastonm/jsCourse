@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let text = 'Hello 123 test text 456 234 098';
+        let pattern = /\d\d\d/g;
+        let firstIndex = text.search(pattern);
+        document.write(`Pattern index ${firstIndex} <br>`);
+        let changeText = text.replace(pattern, '!!!');
+        document.write(changeText);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

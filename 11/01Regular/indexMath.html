@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let simpleText = 'Simple 123 text 456 text regular EX 980'
+        let resumlNumberFromText = simpleText.match(/\d\d\d/g);
+        console.log(resumlNumberFromText);
+        document.write(`Data from string ${resumlNumberFromText} <br>`);
+
+        let operation = '5 мінус 3 = 2';
+        let operationValue = operation.match(/\d/g);
+        console.log(operationValue);
+        document.write(`Operation value ${operationValue} <br>`);
+
+        let str = 'Are you Ok? Yes I am OK';
+        let okRes = str.match(/OK/gi);
+        document.write(`Ok result: ${okRes} <br>`);
+        let okReplace = str.replace(/OK/gi, 'fine');
+        document.write(okReplace);
+
+        let splitText = 'test-A123Test-B456Test-C678Test-D980';
+        let splitRes = splitText.split('-');
+        console.log(splitRes);
+        let splitNumber = splitText.split(/\d\d\d/g);
+        console.log(splitNumber);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
