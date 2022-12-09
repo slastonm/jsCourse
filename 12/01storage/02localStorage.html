@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let container = document.querySelector('p');
+            let read = document.querySelector('.read');
+            let write = document.querySelector('.write');
+            let count = 0;
+            read.onclick = ()=>{
+                container.innerHTML = window.localStorage.getItem('birth');
+                container.innerHTML +="<br>";
+                container.innerHTML += window.localStorage.eyes;
+                container.innerHTML +="<br>";
+                container.innerHTML += window.localStorage['gender'];
+                container.innerHTML +="<br>";
+                container.innerHTML += window.localStorage.Key1;
+                container.innerHTML +="<br>";
+                container.innerHTML += window.localStorage.key2;
+            }
+            write.onclick = ()=>{
+                localStorage.setItem("Key1", "Test key value 1");
+                localStorage.key2= count++;
+                localStorage['key3'] = 'Key3 test value'
+            }
+            localStorage.removeItem('key3');
+            localStorage.removeItem('gender');
+
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Local storage
+    </h1>
+    <button class="read">
+        Read
+    </button>
+    <button class="write">
+        Write
+    </button>
+    <p></p>
+</body>
+</html>
