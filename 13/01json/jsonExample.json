@@ -1,0 +1,18 @@
+{
+    "name":"Tom",
+    "companyork":{
+        "name":"Developer Factory",
+        "address":"USA"
+    },
+    "tomCovorkers":[
+        {
+            "name":"Bob",
+            "age":25
+        },
+        {
+            "name":"Bob",
+            "age":25
+        }
+    ],
+    "brothers":true
+}

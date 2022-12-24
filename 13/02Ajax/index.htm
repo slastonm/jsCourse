@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // XMLHttpRequest
+        const xhr = new XMLHttpRequest();
+        // xhr.open(method, user, password ,true)
+        // GET  - запит
+        // POST- зміна і модифікація
+        // DELETE - delete data
+        // PATH - modify data
+        // PUT - update data and modify
+        xhr.open('GET', "https://jsonplaceholder.typicode.com/posts");
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4 && xhr.status == 200){
+                let objectData = xhr.response;
+                console.log(objectData);
+            }
+        }
+        xhr.responseType="json";
+        xhr.send(null);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
