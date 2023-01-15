@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .admin{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- npm install -g @vue/cli -->
+    <h1>
+        Hello vue
+    </h1>
+    <div id="app">
+        <p>
+            {{productName}}
+        </p>
+        <p>
+            {{price}} {{curency}}
+        </p>
+        <button v-on:click="price++">
+            Price Up
+        </button>
+        <button @click="price--">
+            Price Down
+        </button>
+        <button @click="changeCurency">
+            Change curency
+        </button>
+        <button @mouseleave="handleEvent">
+            Event
+        </button>
+        <button  @click="addValue(5)">
+            add 5 to price
+        </button>
+        <button  @click="showInfoBlock">
+            Switch info
+        </button>
+        <div v-if="showInfo">
+            Info 1
+        </div>
+        <div v-else>
+            Info 2
+        </div>
+        <div v-show="showInfo">
+            Show in DOM
+        </div>
+        <a href="link">Link 1</a>
+        <a href="{{link}}">Link 2</a>
+        <a v-bind:href="link">Link3</a>
+        <a :href="link">Link4</a>
+
+        <ul>
+            <!-- <li>
+                {{users[0].name}} {{users[0].age}}
+            </li> -->
+            <li 
+                v-for="user in users"
+                :class="{admin:user.isAdmin}"
+                @click="adminMode(user)">
+                {{user.name}} - {{user.age}}
+            </li>
+        </ul>
+
+        <ul>
+            <!-- <li>
+                {{users[0].name}} {{users[0].age}}
+            </li> -->
+            <li 
+                v-for="user in justAdmin">
+                {{user.name}} - {{user.age}}
+            </li>
+        </ul>
+
+    </div>
+    <footer>
+        <!-- {{productName}}         -->
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
